@@ -7,9 +7,13 @@ function install_bash {
 
     echo "### Added by Patrick's config ###" >> $HOME/.bashrc
     cat $SCRIPT_DIR/bashrc >> $HOME/.bashrc
+    echo "" >> $HOME/.bashrc
     echo "### End Patrick's config ###" >> $HOME/.bashrc
+
+
     echo "### Added by Patrick's config ###" >> $HOME/.profile
     cat $SCRIPT_DIR/profile >> $HOME/.profile
+    echo "" >> $HOME/.profile
     echo "### End Patrick's config ###" >> $HOME/.profile
 
     echo "    Done!"
