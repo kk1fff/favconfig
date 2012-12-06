@@ -1,0 +1,15 @@
+function toclip {
+  if [ -n "$TMUX" ]; then
+    tmux save-buffer - | xclip
+    if [ $? -eq 0 ]; then
+      echo "Copied tmux buffer to system clipboard"
+    else
+      echo "Fail to copy tmux buffer to system clipboard"
+      return 1
+    fi
+  else
+    echo "We are not in tmux"
+    return 1
+  fi
+  return 0
+}
